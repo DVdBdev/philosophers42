@@ -6,7 +6,7 @@
 /*   By: dvan-den <dvan-den@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:35:18 by dvan-den          #+#    #+#             */
-/*   Updated: 2024/02/06 15:01:15 by dvan-den         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:40:23 by dvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,5 @@ int	validate_args(char **argv)
 		return (validate_args_error("Invalid time to sleep\n"));
 	if (argv[5] && (ft_atoi(argv[3]) < 0 || validate_only_numbers(argv[3])))
 		return (validate_args_error("Invalid times each philo must eat\n"));
+	return (0);
 }

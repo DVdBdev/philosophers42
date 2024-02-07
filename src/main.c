@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-    if (argc != 5 || argc != 6)
+    if (argc != 5 && argc != 6)
         return (validate_args_error("Invalid argument count\n"), 1);
     if (validate_args(argv) > 0)
         return (1);
