@@ -23,7 +23,7 @@ typedef struct s_data
 {
 	pthread_t		*tid;
 	int				philo_num;
-	int				meals_eaten;
+	int				meals_nb;
 	int				is_dead;
 	int				finished;
 	t_philo			*philos;
@@ -54,5 +54,11 @@ typedef struct	s_philo
 // validate_args.c
 int	validate_args(char **argv);
 int	validate_args_error(char *err_str);
+
+// error.c
+int	error(char *str, t_data *data);
+
+// init.c
+int	init(t_data *data, char *argv[], int argc);
 
 #endif
