@@ -16,36 +16,40 @@
 
 #include "../Libft-plus/libft.h"
 #include <stdio.h>
+#include <stdint.h>
 #include <pthread.h>
+
+typedef struct s_data
+{
+	pthread_t		*tid;
+	int				philo_num;
+	int				meals_eaten;
+	int				is_dead;
+	int				finished;
+	t_philo			*philos;
+	uint64_t		death_time;
+	uint64_t		eat_time;
+	uint64_t		sleep_time;
+	uint64_t		start_time;
+	pthread_mutex_t	*forks;
+	pthread_mutex_t	lock;
+	pthread_mutex_t	write;
+
+}	t_data;
 
 typedef struct	s_philo
 {
-	pthread_t		thread;
+	struct s_data	*data;
+	pthread_t		tl;
 	int				id;
+	int				eat_count;
+	int				status;
 	int				eating;
-	int				meals_eaten;
-	int				last_meal;
-	int				time_to_die;
-	int				time_to_eat;
-	int				time_to_sleep;
-	int				start_time;
-	int				num_of_philos;
-	int				num_time_to_eat;
-	int				*dead;
+	uint64_t		time_to_die;
+	pthread_mutex_t	lock;
 	pthread_mutex_t	*r_fork;
-	pthread_mutex_t	*l_fork;
-	pthread_mutex_t	*write_lock;
-	pthread_mutex_t	*dead_lock;
-	pthread_mutex_t	*meal_lock;
+	pthread_mutex_t	*l_fork;	
 }	t_philo;
-
-typedef struct s_program
-{
-	int				is_dead;
-	pthread_mutex_t	*write_lock;
-	pthread_mutex_t	*dead_lock;
-	pthread_mutex_t	*meal_lock;
-}	t_program;
 
 // validate_args.c
 int	validate_args(char **argv);
