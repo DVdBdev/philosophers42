@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvan-den <dvan-den@student.s19.be>         +#+  +:+       +#+        */
+/*   By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:52:56 by dvan-den          #+#    #+#             */
-/*   Updated: 2023/10/26 20:56:14 by dvan-den         ###   ########.fr       */
+/*   Updated: 2024/04/02 15:49:10 by dvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_strcmp(char *s1, char *s2);
 
 /* ft_printf */
 int		printf_char(int c);
@@ -77,6 +78,7 @@ int		printf_hex_lower(unsigned int n);
 int		printf_hex_upper(unsigned int n);
 int		printf_pointer(void *ptr);
 int		ft_printf(const char *str, ...);
+int		printf_lu_int(long unsigned int n);
 
 /* Get-Next-Line */
 char	*get_next_line(int fd);

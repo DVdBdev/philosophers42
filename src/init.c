@@ -6,7 +6,7 @@
 /*   By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 12:07:15 by dvan-den          #+#    #+#             */
-/*   Updated: 2024/04/02 13:40:12 by dvan-den         ###   ########.fr       */
+/*   Updated: 2024/04/02 15:54:27 by dvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static int	init_data(t_data *data, char *argv[], int argc)
  *
  * @return An integer representing the success status. Returns 0 on success.
  */
-static int	alloc(t_data *data)
+static int	allocate_data(t_data *data)
 {
 	data->tid = malloc(sizeof(pthread_t) * data->philo_num);
 	if (!data->tid)

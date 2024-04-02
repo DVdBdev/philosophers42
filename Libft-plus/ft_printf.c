@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvan-den <dvan-den@student.s19.be>         +#+  +:+       +#+        */
+/*   By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 00:01:18 by dvan-den          #+#    #+#             */
-/*   Updated: 2023/11/10 10:45:11 by dvan-den         ###   ########.fr       */
+/*   Updated: 2024/04/02 16:11:17 by dvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ static int	printf_formats(va_list args, const char format)
 		len = len + printf_int(va_arg(args, int));
 	else if (format == 'u')
 		len = len + printf_unsigned_int(va_arg(args, unsigned int));
+	else if (format == 'q')
+		len = len + printf_lu_int(va_arg(args, long long unsigned int));
 	else if (format == '%')
 		len = len + printf_percent();
 	else if (format == 'x')

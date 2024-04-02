@@ -12,7 +12,19 @@
 
 #include "../inc/philo.h"
 
-int main(int argc, char *argv[])
+int	only_one_philo(t_data *data)
+{
+    data->start_time = get_time();
+    if (pthread_create(&data->tid[0], NULL, &routine, &data->philos[0]))
+        return (error("ERROR WHILE CREATING THREADS", data));
+    pthread_detach(data->tid[0]);
+    while (data->is_dead == 0)
+        ft_usleep(0);
+    exit_and_cleanup(data);
+    return (0);
+}
+
+int	main(int argc, char *argv[])
 {
     t_data  data;
 
@@ -22,4 +34,6 @@ int main(int argc, char *argv[])
         return (1);
     if (init(&data, argv, argc))
         return (1);
+    if (data.philo_num == 1)
+		return (only_one_philo(&data));
 }

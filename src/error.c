@@ -6,7 +6,7 @@
 /*   By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 12:30:17 by dvan-den          #+#    #+#             */
-/*   Updated: 2024/04/02 13:15:52 by dvan-den         ###   ########.fr       */
+/*   Updated: 2024/04/02 14:12:26 by dvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	clear_data(t_data *data)
  *
  * @param data A pointer to the t_data structure containing program data.
  */
-static void	exit_and_cleanup(t_data *data)
+void	exit_and_cleanup(t_data *data)
 {
 	int	i;
 

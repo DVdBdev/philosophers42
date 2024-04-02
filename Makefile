@@ -2,7 +2,7 @@
 CC = gcc
 
 # Compilation flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -pthread
 
 # Directories
 INC_DIR = inc

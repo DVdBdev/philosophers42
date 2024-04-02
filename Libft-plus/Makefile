@@ -6,7 +6,7 @@
 #    By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 10:44:39 by dvan-den          #+#    #+#              #
-#    Updated: 2023/12/01 09:15:18 by dvan-den         ###   ########.fr        #
+#    Updated: 2024/04/02 15:53:20 by dvan-den         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ SRC	=	ft_substr.c ft_strlen.c ft_strjoin.c ft_strtrim.c \
 	     ft_strdup.c ft_calloc.c ft_memcpy.c ft_printf.c \
 		 printf_char.c printf_hex.c printf_int.c printf_percent.c \
 		 printf_pointer.c printf_string.c printf_unsigned_int.c \
-		 get_next_line.c get_next_line_utils.c
+		 get_next_line.c get_next_line_utils.c printf_lu_int.c \
+		 ft_strcmp.c \
 
 OBJS = $(SRC:%.c=$(OBJ_DIR)/%.o)
 
